@@ -23,11 +23,11 @@ Explícalo en 2 o 3 líneas, con tus palabras (Hito 3)
 ## Diario
 
 
-30/10/2026 · Hecho: he creado tres listas de datos para un club deportivo: actividades, socios e inscripciones. He relacionado las listas mediante identificadores y he utilizado console.table() para mostrar los datos
+- 30/10/2026 · Hecho: he creado tres listas de datos para un club deportivo: actividades, socios e inscripciones. He relacionado las listas mediante identificadores y he utilizado console.table() para mostrar los datos
 
-Me ha costado: cómo se relacionan las tres listas mediante los ID
+- Me ha costado: cómo se relacionan las tres listas mediante los ID
 
-He preguntado: cómo organizar los datos utilizando arrays y constantes
+- He preguntado: cómo organizar los datos utilizando arrays y constantes
 
 ## Uso de IA
 
@@ -38,5 +38,4 @@ He preguntado: cómo organizar los datos utilizando arrays y constantes
 - Qué he aprendido: identificar cada posición mediante constantes y relacionar los registros utilizando ID
 
 ## Git (opcional)
-
-Si llevas el proyecto en Git, pon aquí el enlace al repositorio:
+- Github: https://github.com/baletinovic/fase1
