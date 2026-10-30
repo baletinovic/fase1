@@ -1,6 +1,9 @@
 // Menú del programa. Se ejecuta al abrir index.html.
 //
 // Hito 1: muestra aquí tus tres arrays con console.table.
+console.table(actividades);
+console.table(socios);
+console.table(inscripciones);
 //
 // Hito 4: convierte este fichero en un menú que
 //   - pide la opción con prompt

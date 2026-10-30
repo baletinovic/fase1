@@ -33,7 +33,7 @@ He preguntado: cómo organizar los datos utilizando arrays y constantes
 
 - Herramienta: ChatGPT.
 - Para qué la usé: para pedir ejemplos de arrays y entender cómo relacionarlos mediante ID
-- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto:actividades, socios e inscripciones
+- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto:actividades, socios e inscripciones y ayuda para instalar Git, crear commits y conectar el proyecto con GitHub.
 - Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo
 - Qué he aprendido: identificar cada posición mediante constantes y relacionar los registros utilizando ID
 
