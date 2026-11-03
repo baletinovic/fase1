@@ -29,13 +29,25 @@ Explícalo en 2 o 3 líneas, con tus palabras (Hito 3)
 
 - He preguntado: cómo organizar los datos utilizando arrays y constantes
 
+----------------------------------------------
+
+- 03/11/2026 · Hecho: he creado siete funciones de consulta para buscar actividades por ID, filtrar por tipo, ordenar por dos criterios, comprobar condiciones, calcular el total de las cuotas y obtener tipos sin repetir. También he creado ocho pruebas y todas funcionan correctamente.
+
+- Me ha costado: entender cómo funcionan los métodos find(), filter(), sort() y reduce().
+
+- He preguntado: cómo utilizar estos métodos y cómo comprobar que las funciones funcionan correctamente.
+
 ## Uso de IA
 
 - Herramienta: ChatGPT.
-- Para qué la usé: para pedir ejemplos de arrays y entender cómo relacionarlos mediante ID
-- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto:actividades, socios e inscripciones y ayuda para instalar Git, crear commits y conectar el proyecto con GitHub.
-- Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo
-- Qué he aprendido: identificar cada posición mediante constantes y relacionar los registros utilizando ID
+
+- Para qué la usé: para pedir ejemplos de arrays, entender cómo relacionarlos mediante ID y recibir ayuda para crear funciones y pruebas.
+
+- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto (actividades, socios e inscripciones), explicaciones de los métodos find(), filter(), sort(), some() y reduce(), ayuda con las pruebas y con Git y GitHub.
+
+- Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo y simplifiqué algunas funciones para utilizar métodos y estructuras que entiendo mejor.
+
+- Qué he aprendido: identificar cada posición mediante constantes, relacionar los registros utilizando ID, crear funciones de consulta, comprobarlas mediante pruebas y gestionar el proyecto con Git y GitHub.
 
 ## Git (opcional)
 - Github: https://github.com/baletinovic/fase1
