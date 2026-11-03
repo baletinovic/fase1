@@ -5,22 +5,48 @@
 //   igual(obtenido, esperado)        números, textos, arrays, Map y Set
 //   casiIgual(obtenido, esperado)    decimales (2 por defecto)
 //   lanzaError(fn, mensaje)          comprueba que se lanza un error con ese mensaje
-//
-// Ejemplos (cámbialos por los de tu proyecto):
-//
-// prueba("buscarPorId devuelve el libro 3", () => {
-//   igual(buscarPorId(3)[L_TITULO], "Niebla");
-// });
-//
-// prueba("los géneros salen sin repetir", () => {
-//   igual(generos(libros), new Set(["poesía", "novela"]));
-// });
-//
-// prueba("prestar falla si el socio no existe", () => {
-//   lanzaError(() => prestar(99, 1), "Socio no encontrado");
-// });
-//
-// Necesitas 10 pruebas o más, 2 de ellas de tu regla personal.
 
-// Borra esta prueba cuando escribas la primera tuya.
-prueba("La plantilla funciona", () => igual(1 + 1, 2));
+prueba("aNumero convierte importes correctamente", () => {
+    igual(aNumero("25,50"), 25.5);
+    igual(aNumero("30"), 30);
+});
+
+prueba("aNumero lanza un error con un importe no válido", () => {
+    lanzaError(() => aNumero("hola"), "Importe no válido");
+});
+
+prueba("buscarActividad encuentra la actividad 3", () => {
+    igual(buscarActividad(3)[A_NOMBRE], "Pádel iniciación");
+});
+
+
+prueba("filtrarActividades devuelve las actividades de salud", () => {
+    igual(filtrarActividades("salud").length, 5);
+});
+
+
+prueba("actividadesOrdenadas ordena por tipo y nombre sin modificar la lista original", () => {
+    const ordenadas = actividadesOrdenadas();
+
+    igual(ordenadas[0][A_NOMBRE], "Aquagym");
+    igual(ordenadas[1][A_NOMBRE], "Natación adultos");
+    igual(ordenadas[2][A_NOMBRE], "Natación infantil");
+
+    igual(actividades[0][A_NOMBRE], "Yoga");
+});
+
+
+prueba("hayActividadesConPlazas comprueba el mínimo de plazas", () => {
+    igual(hayActividadesConPlazas(15), true);
+    igual(hayActividadesConPlazas(25), false);
+});
+
+
+prueba("totalCuotas calcula correctamente la suma de las cuotas", () => {
+    igual(totalCuotas(), 343.75);
+});
+
+
+prueba("tiposUnicos devuelve los tipos sin repetir y ordenados", () => {
+    igual(tiposUnicos(), ["acuática", "competición", "raqueta", "salud"]);
+});

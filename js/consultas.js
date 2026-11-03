@@ -17,15 +17,92 @@
 //   - un closure (por ejemplo, un generador de id)
 //   - una función propia que reciba otra función como parámetro
 //
-// Cada función lleva su comentario JSDoc, por ejemplo:
-//
-// /**
-//  * Devuelve los libros de un género.
-//  * @param {Array[]} libros  Lista de libros (cada libro es una fila)
-//  * @param {string} genero   Género buscado
-//  * @returns {Array[]} Libros de ese género
-//  */
-// function librosDeGenero(libros, genero) {
-//   return libros.filter((libro) => libro[L_GENERO] === genero);
-// }
+/**
+ * Convierte un importe de texto en número
+ * @param {string} texto - importe que queremos convertir
+ * @returns {number} el importe convertido en número
+ */
+function aNumero(texto) {
+    const limpio = String(texto).trim().replace(",", ".");
+    const numero = Number(limpio);
+
+    if (limpio === "" || Number.isNaN(numero)) {
+        throw new Error("Importe no válido");
+    }
+
+    return numero;
+}
+
+/**
+ * Busca una actividad por su id
+ * @param {number} id - id de la actividad que buscamos
+ * @returns {Array|undefined} la actividad encontrada o undefined
+ */
+function buscarActividad(id) {
+    return actividades.find(actividad => actividad[A_ID] === id);
+}
+
+/**
+ * Filtra las actividades por tipo.
+ * @param {string} tipo - tipo de actividad que buscamos
+ * @returns {Array} lista de actividades del tipo indicado
+ */
+function filtrarActividades(tipo) {
+    return actividades.filter(actividad => actividad[A_TIPO] === tipo);
+}
+
+/**
+ * Ordena las actividades por tipo y nombre.
+ * @returns {Array} lista de actividades ordenadas
+ */
+function actividadesOrdenadas() {
+    return [...actividades].sort((a, b) => a[A_TIPO].localeCompare(b[A_TIPO]) ||a[A_NOMBRE].localeCompare(b[A_NOMBRE])
+    );
+}
+
+/**
+ * Comprueba si existe alguna actividad con un mínimo de plazas
+ * @param {number} minimo - número mínimo de plazas
+ * @returns {boolean} true si existe alguna actividad, false si no
+ */
+function hayActividadesConPlazas(minimo) {
+    return actividades.some(actividad => actividad[A_PLAZAS] >= minimo);
+}
+
+/**
+ * Calcula el total de las cuotas de las inscripciones
+ * @returns {number} suma total de las cuotas
+ */
+function totalCuotas() {
+    const total = inscripciones.reduce(
+        (acumulado, inscripcion) => acumulado + aNumero(buscarActividad(inscripcion[I_ACTIVIDAD])[A_CUOTA]), 0
+    );
+
+    return Math.round(total * 100) / 100;
+}
+
+/**
+ * Obtiene los tipos de actividades sin repetir
+ * @returns {Array} lista de tipos únicos ordenados
+ */
+function tiposUnicos() {
+    const tipos = [];
+
+    for (let i = 0; i < actividades.length; i++) {
+        const tipo = actividades[i][A_TIPO];
+        let encontrado = false;
+
+        for (let j = 0; j < tipos.length; j++) {
+            if (tipos[j] === tipo) {
+                encontrado = true;
+            }
+        }
+
+        if (tipo !== "" && encontrado === false) {
+            tipos.push(tipo);
+        }
+    }
+
+    return tipos.sort();
+}
 
