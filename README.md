@@ -18,7 +18,9 @@ Copia aquí el enunciado de tu ficha:
 
 ## Por qué uso Map y Set
 
-Explícalo en 2 o 3 líneas, con tus palabras (Hito 3)
+- Uso Map para relacionar los id con los registros y encontrar actividades y socios más fácilmente y para agrupar actividades por tipo.
+
+- Uso Set para guardar valores únicos sin repetir. A diferencia de un array Set elimina automáticamente los valores duplicados.
 
 ## Diario
 
@@ -37,17 +39,25 @@ Explícalo en 2 o 3 líneas, con tus palabras (Hito 3)
 
 - He preguntado: cómo utilizar estos métodos y cómo comprobar que las funciones funcionan correctamente.
 
+----------------------------------------------
+
+- 04/11/2026 · Hecho: he creado índices Map para actividades y socios, he agrupado las actividades por tipo, he utilizado Set para obtener valores únicos, he creado una función que recibe otra función como parámetro.
+
+- Me ha costado: entender cómo funcionan Map, Set.
+
+- He preguntado: cómo utilizar Map para buscar registros y agrupar actividades por tipo.
+
 ## Uso de IA
 
 - Herramienta: ChatGPT.
 
 - Para qué la usé: para pedir ejemplos de arrays, entender cómo relacionarlos mediante ID y recibir ayuda para crear funciones y pruebas.
 
-- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto (actividades, socios e inscripciones), explicaciones de los métodos find(), filter(), sort(), some() y reduce(), ayuda con las pruebas y con Git y GitHub.
+- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto (actividades, socios e inscripciones), explicaciones de los métodos find(), filter(), sort(), some() y reduce(), ayuda con las pruebas y con Git y GitHub y ayuda para utilizar Map y Set.
 
-- Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo y simplifiqué algunas funciones para utilizar métodos y estructuras que entiendo mejor.
+- Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo y simplifiqué algunas funciones para utilizar métodos y estructuras que entiendo mejor y corregí algunas partes del código que no estaban bien utilizando Map y Set.
 
-- Qué he aprendido: identificar cada posición mediante constantes, relacionar los registros utilizando ID, crear funciones de consulta, comprobarlas mediante pruebas y gestionar el proyecto con Git y GitHub.
+- Qué he aprendido: identificar cada posición mediante constantes, relacionar los registros utilizando ID, utilizar Map y Set, crear funciones de consulta, comprobarlas mediante pruebas y gestionar el proyecto con Git y GitHub.
 
 ## Git (opcional)
 - Github: https://github.com/baletinovic/fase1
