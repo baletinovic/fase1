@@ -50,3 +50,31 @@ prueba("totalCuotas calcula correctamente la suma de las cuotas", () => {
 prueba("tiposUnicos devuelve los tipos sin repetir y ordenados", () => {
     igual(tiposUnicos(), ["acuática", "competición", "raqueta", "salud"]);
 });
+
+prueba("agruparActividadesPorTipo agrupa las actividades por tipo", () => {
+    const grupos = agruparActividadesPorTipo();
+
+    igual(grupos.get("salud").length, 5);
+
+    igual(grupos.get("salud"), ["Yoga","Preparación física","Pilates","Zumba","Escalada"]);
+});
+
+
+
+prueba("tiposUnicosSet devuelve los tipos sin repetir", () => {
+    igual(tiposConSet(), new Set(["salud","acuática","raqueta","competición"]));
+});
+
+
+prueba("crearGeneradorId genera ids consecutivos", () => {
+    const siguiente = crearGeneradorId(12);
+    igual(siguiente(), 13);
+    igual(siguiente(), 14);
+    igual(siguiente(), 15);
+});
+
+
+prueba("filtrarPor filtra una lista utilizando una condición", () => {
+    const resultado = filtrarPor(actividades, actividad => actividad[A_TIPO] === "salud");
+    igual(resultado.length, 5);
+});
