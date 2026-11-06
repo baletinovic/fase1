@@ -49,17 +49,25 @@ Descuento familiar en la cuota: el segundo socio de una familia paga un 15 % men
 
 - He preguntado: cómo utilizar Map para buscar registros y agrupar actividades por tipo.
 
+----------------------------------------------
+
+- 06/11/2026 · Hecho: he completado el Hito 4, he creado el menú principal con siete opciones, he implementado las funciones para añadir y eliminar inscripciones, he añadido pruebas para la regla personal y los casos de error, y he revisado la documentación JSDoc.
+
+- Me ha costado: organizar las opciones del menú y controlar los errores en las operaciones de alta y baja.
+
+- He preguntado: cómo organizar el menú principal y cómo comprobar mediante pruebas que las funciones de alta y baja funcionan correctamente.
+
 ## Uso de IA
 
 - Herramienta: ChatGPT.
 
 - Para qué la usé: para pedir ejemplos de arrays, entender cómo relacionarlos mediante ID y recibir ayuda para crear funciones y pruebas.
 
-- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto (actividades, socios e inscripciones), explicaciones de los métodos find(), filter(), sort(), some() y reduce(), ayuda con las pruebas y con Git y GitHub y ayuda para utilizar Map y Set.
+- Qué le pedí (resumen): ejemplos de los tres arrays del proyecto (actividades, socios e inscripciones), explicaciones de los métodos find(), filter(), sort(), some() y reduce(), ayuda con las pruebas y con Git y GitHub y ayuda para utilizar Map y Set, ayuda con el menú principal y las pruebas. 
 
 - Qué cambié yo y por qué: adapté los ejemplos a mi proyecto de un club deportivo y simplifiqué algunas funciones para utilizar métodos y estructuras que entiendo mejor y corregí algunas partes del código que no estaban bien utilizando Map y Set.
 
-- Qué he aprendido: identificar cada posición mediante constantes, relacionar los registros utilizando ID, utilizar Map y Set, crear funciones de consulta, comprobarlas mediante pruebas y gestionar el proyecto con Git y GitHub.
+- Qué he aprendido: identificar cada posición mediante constantes, relacionar los registros utilizando ID, utilizar Map y Set, crear funciones de consulta, comprobarlas mediante pruebas y gestionar el proyecto con Git y GitHub. 
 
 ## Git (opcional)
 - Github: https://github.com/baletinovic/fase1
