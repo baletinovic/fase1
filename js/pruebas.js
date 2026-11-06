@@ -43,8 +43,11 @@ prueba("hayActividadesConPlazas comprueba el mínimo de plazas", () => {
 
 
 prueba("totalCuotas calcula correctamente la suma de las cuotas", () => {
-    igual(totalCuotas(), 343.75);
+    //igual(totalCuotas(), 343.75);
+    igual(totalCuotas(inscripciones), 343.75);
 });
+
+
 
 
 prueba("tiposUnicos devuelve los tipos sin repetir y ordenados", () => {
@@ -77,4 +80,70 @@ prueba("crearGeneradorId genera ids consecutivos", () => {
 prueba("filtrarPor filtra una lista utilizando una condición", () => {
     const resultado = filtrarPor(actividades, actividad => actividad[A_TIPO] === "salud");
     igual(resultado.length, 5);
+});
+
+
+prueba("cuotaFamiliar aplica el descuento del segundo socio", () => {
+    igual(cuotaFamiliar(40, 2), 34);
+});
+
+prueba("cuotaFamiliar aplica el descuento del tercer socio", () => {
+    igual(cuotaFamiliar(40, 3), 30);
+});
+
+prueba("cuotaFamiliar no aplica descuento al primer socio", () => {
+    igual(cuotaFamiliar(40, 1), 40);
+});
+
+prueba("inscribir añade una nueva inscripción sin modificar la lista original", () => {
+    const siguienteId = crearGeneradorId(inscripciones.length);
+
+    const resultado = inscribir(inscripciones, 6, 13, 40, siguienteId);
+
+    igual(resultado.length, 13);
+    igual(resultado[resultado.length - 1], [13, 6, 13, 40, false]);
+    igual(inscripciones.length, 12);
+});
+
+prueba("borrarInscripcion elimina una inscripción sin modificar la lista original", () => {
+    const resultado = borrarInscripcion(inscripciones, 12);
+
+    igual(resultado.length, 11);
+    igual(inscripciones.length, 12);
+});
+
+prueba("borrarInscripcion da error si la inscripción no existe", () => {
+    lanzaError(() => borrarInscripcion(inscripciones, 99), "Inscripción no encontrada");
+});
+
+prueba("inscribir da error si el socio no existe", () => {
+    lanzaError(
+        () => inscribir(inscripciones, 99, 13, 40, crearGeneradorId(12)),
+        "Socio no encontrado"
+    );
+});
+
+prueba("inscribir da error si la actividad no existe", () => {
+    lanzaError(
+        () => inscribir(inscripciones, 6, 99, 40, crearGeneradorId(12)),
+        "Actividad no encontrada"
+    );
+});
+
+prueba("inscribir da error si el día no es válido", () => {
+    lanzaError(
+        () => inscribir(inscripciones, 6, 13, 61, crearGeneradorId(12)),
+        "Día no válido"
+    );
+});
+
+prueba("inscribir no consume un ID si la operación falla", () => {
+    const siguienteId = crearGeneradorId(12);
+
+    lanzaError(
+        () => inscribir(inscripciones, 99, 13, 40, siguienteId),
+        "Socio no encontrado"
+    );
+
+    igual(siguienteId(), 13);
 });

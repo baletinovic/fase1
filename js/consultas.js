@@ -177,7 +177,6 @@ function hayActividadesConPlazas(minimo) {
 /**
  * Calcula el total de las cuotas de las inscripciones
  * @returns {number} suma total de las cuotas
- */
 function totalCuotas() {
     const total = inscripciones.reduce(
         (acumulado, inscripcion) => acumulado + aNumero(buscarActividad(inscripcion[I_ACTIVIDAD])[A_CUOTA]), 0
@@ -185,10 +184,26 @@ function totalCuotas() {
 
     return Math.round(total * 100) / 100;
 }
+*/
+
+
+/**
+ * Calcula el total de las cuotas de las inscripciones
+ * @param {Array[]} listaInscripciones - lista de inscripciones
+ * @returns {number} suma total de las cuotas
+ */
+function totalCuotas(listaInscripciones) {
+    const total = listaInscripciones.reduce(
+        (acumulado, inscripcion) => acumulado + aNumero(buscarActividad(inscripcion[I_ACTIVIDAD])[A_CUOTA]),
+        0
+    );
+
+    return Math.round(total * 100) / 100;
+}
 
 /**
  * Obtiene los tipos de actividades sin repetir
- * @returns {Array[]} lista de tipos únicos ordenados
+ * @returns {string[]} lista de tipos únicos ordenados
  */
 function tiposUnicos() {
     const tipos = [];

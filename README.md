@@ -14,7 +14,9 @@ Se abren con doble clic o con Live Server. No hay que instalar nada
 
 Copia aquí el enunciado de tu ficha:
 
-> ...
+> Precio o importe escalonado
+
+Descuento familiar en la cuota: el segundo socio de una familia paga un 15 % menos y el tercero y siguientes, un 25 % menos. cuotaFamiliar(cuotaBase, posicion) devuelve lo que paga cada uno.
 
 ## Por qué uso Map y Set
 
