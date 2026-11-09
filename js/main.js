@@ -126,7 +126,7 @@ function menu()
                     console.log(agruparActividadesPorTipo());
 
                     console.log("Tipos únicos (Set):");
-                    console.log(tiposUnicosSet());
+                    console.log(tiposUnicos());
 
                     alert("Las consultas se han mostrado en la consola (F12)");
                     break;
